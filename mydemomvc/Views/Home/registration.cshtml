@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "registration";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/registration.js"></script>
+<h2>registration</h2>
+
+<input type="hidden" id="hdnid" />
+
+<input type="text" id="txtname" placeholder="Enter name" style="width:200px" />
+<br></br>
+<input type="number" id="txtnumber" placeholder="Enter number" style="width:200px" />
+<br></br>
+
+<lable for"city"> SELECT CITY:</lable>
+<select name="city" id="city" style="width:200px">
+
+    <option value="chandrapur">chandapur</option>
+    <option value="Buldhan">Buldhan</option>
+    <option value="nagpur">nagpur</option>
+    <option value="Nashik">Nashik</option>
+    <option value="wani">wani</option>
+    <option value="bhadrawati">bhadrawati</option>
+
+
+</select>
+<br /></br>
+<textarea typeof="text" placeholder="Enter your Address" style="width:200px;" id="texADD">
+</textarea>
+<br /></br>
+
+<input type="button" value="submit" class="btn btn-outline-danger " onclick="Savereg()" />
+<table id="tblregistrations" class="table table-bordered">
+    <thead>
+        <tr>
+            <th> srno </th>
+            <th> Id </th>
+            <th> Name </th>
+            <th> MobileNo </th>
+            <th> City </th>
+            <th> Address </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Pie Chart</h5>
+
+            <!-- Pie Chart -->
+            <canvas id="pieChart" style="max-height: 400px;"></canvas>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    new Chart(document.querySelector('#pieChart'), {
+                        type: 'pie',
+                        data: {
+                            labels: [
+                                'Red',
+                                'Blue',
+                                'Yellow'
+                            ],
+                            datasets: [{
+                                label: 'My First Dataset',
+                                data: [300, 50, 100],
+                                backgroundColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(255, 205, 86)'
+                                ],
+                                hoverOffset: 4
+                            }]
+                        }
+                    });
+                });
+            </script>
+            <!-- End Pie CHart -->
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
